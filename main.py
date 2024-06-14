@@ -45,3 +45,7 @@ def index():
     </html>
     """
     return HTMLResponse(content=html_content, status_code=200)
+
+@app.post("/post_reserve")
+async def new_naming(user):
+    return {"response": f"Hello, {user}!\n Your reservation is complete!"}
